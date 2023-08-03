@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  web:
+    container_name: cartoon_cards
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - ".:/app:rw"
+    tty: true
+    command: npm start
